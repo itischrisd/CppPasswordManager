@@ -509,4 +509,5 @@ fabric.properties
 /.idea/modules.xml
 /.idea/PROJ.iml
 /.idea/inspectionProfiles/Project_Default.xml
-/CMakeLists.txt
+/.idea/vcs.xml
+/.idea/.name
