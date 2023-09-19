@@ -78,13 +78,13 @@ You can use any compiler you want. For Windows platforms, I prefer to use MinGW.
 - On Linux/macOS:
 
   ```
-  ./PasswordManager
+  ./CppPasswordManager
   ```
 
 - On Windows:
 
   ```
-  PasswordManager.exe
+  CppPasswordManager.exe
   ```
 
 ## Usage
