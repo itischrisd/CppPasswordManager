@@ -2,5 +2,6 @@ cmake_minimum_required(VERSION 3.24)
 project(CppPasswordManager)
 
 set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(CppPasswordManager model/Password/Password.cpp model/Password/Generator.cpp model/Password/Generator.h model/Utils/Randomizer.cpp model/Utils/Randomizer.h model/Password/Checker.cpp model/Password/Checker.h main.cpp model/File/Encrypter.cpp model/File/Encrypter.h model/File/ReaderWriter.cpp model/File/ReaderWriter.h model/UserMenuModel.cpp model/UserMenuModel.h model/File/Serializer.cpp model/File/Serializer.h view/Locale/EN.cpp view/Utils/Components.cpp view/Utils/Components.h controller/MainMenuController.cpp controller/MainMenuController.h view/MainMenuView.cpp view/MainMenuView.h controller/UserMenuController.cpp controller/UserMenuController.h controller/Utils/Validator.cpp controller/Utils/Validator.h controller/Utils/Sanitizer.cpp controller/Utils/Sanitizer.h view/UserMenuView.cpp view/UserMenuView.h controller/Utils/CommonControllerUtils.cpp controller/Utils/CommonControllerUtils.h model/Password/Password.h view/Utils/CommonViewUtils.cpp view/Utils/CommonViewUtils.h model/Utils/Timestamp.cpp model/Utils/Timestamp.h)

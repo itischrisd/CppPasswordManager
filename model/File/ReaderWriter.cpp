@@ -5,7 +5,7 @@
 #include "Encrypter.h"
 #include "../Utils/Timestamp.h"
 
-auto readFile(const std::string path_to_file) -> std::deque<std::string> {
+auto readFile(const std::string& path_to_file) -> std::deque<std::string> {
     auto file = std::fstream(path_to_file, std::ios::in | std::ios::out);
     auto data = std::deque<std::string>{};
     auto timestamp = std::string();
@@ -19,7 +19,7 @@ auto readFile(const std::string path_to_file) -> std::deque<std::string> {
     return data;
 }
 
-auto writeFile(const std::deque<std::string> &data, const std::string path_to_file) -> void {
+auto writeFile(const std::deque<std::string> &data, const std::string& path_to_file) -> void {
     auto file = std::fstream(path_to_file, std::ios::out);
     for (auto const &line: data) file << line << '\n';
     file.close();
