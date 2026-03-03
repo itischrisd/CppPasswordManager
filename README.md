@@ -1,6 +1,12 @@
-# Password Manager
+<h1 align="center">
+  <div>
+    <img width="80" src="https://raw.githubusercontent.com/itischrisd/itis-PJATK/main/logo.svg" alt="PJAIT logo" />
+  </div>
+  Password Manager
+</h1>
 
-This project was developed as a final assignment for the PJC (Programming in C++) practical classes, taught by Filip Kwiatkowski during studies on [PJAIT](https://www.pja.edu.pl/en/).
+This project was developed as a final assignment for the [PJC](https://github.com/itisarchive/itis-PJC) (Programming in
+C++) practical classes, taught by Filip Kwiatkowski during studies on [PJAIT](https://www.pja.edu.pl/en/).
 
 ## Project Description
 
@@ -65,6 +71,7 @@ Follow these steps to build and run the Password Manager application:
   ```
   cmake .. -G "MinGW Makefiles"
   ```
+
 You can use any compiler you want. For Windows platforms, I prefer to use MinGW.
 
 5. Build the application:
@@ -106,8 +113,10 @@ The following code is distributed under the [GPLv3](./LICENSE).
 
 ---
 
-If you need some help, notice any bugs or come up with possible improvements, feel free to reach out to me and/or create a pull request.
+If you need some help, notice any bugs or come up with possible improvements, feel free to reach out to me and/or create
+a pull request.
 
 ---
 
-Project has been ulpoaded to GitHub as-is. Not passing some arguments by reference (such as strings) is a known issue and an unmet requirement. There is no plan to fix it at the moment.
+Project has been ulpoaded to GitHub as-is. Not passing some arguments by reference (such as strings) is a known issue
+and an unmet requirement. There is no plan to fix it at the moment.
