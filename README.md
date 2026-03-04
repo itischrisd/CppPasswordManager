@@ -50,13 +50,13 @@ Follow these steps to build and run the Password Manager application:
 1. Clone the repository:
 
   ```
-  git clone https://github.com/itischrisd/CppPasswordManager.git
+  git clone https://github.com/itisarchive/itis-PJC-PasswordManager.git
   ```
 
 2. Navigate to the project directory:
 
   ```
-  cd CppPasswordManager
+  cd PasswordManager
   ```
 
 3. Create a build directory and navigate to it:
@@ -85,13 +85,13 @@ You can use any compiler you want. For Windows platforms, I prefer to use MinGW.
 - On Linux/macOS:
 
   ```
-  ./CppPasswordManager
+  ./PasswordManager
   ```
 
 - On Windows:
 
   ```
-  CppPasswordManager.exe
+  PasswordManager.exe
   ```
 
 ## Usage
