@@ -115,8 +115,3 @@ The following code is distributed under the [GPLv3](./LICENSE).
 
 If you need some help, notice any bugs or come up with possible improvements, feel free to reach out to me and/or create
 a pull request.
-
----
-
-Project has been ulpoaded to GitHub as-is. Not passing some arguments by reference (such as strings) is a known issue
-and an unmet requirement. There is no plan to fix it at the moment.
