@@ -1,4 +1,4 @@
-#include <random>
+#pragma once
 
 namespace rnd {
     /**

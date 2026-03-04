@@ -1,21 +1,22 @@
 #include "MainMenuView.h"
-#include "Utils/Components.h"
+
 #include "Locale/EN.cpp"
+#include "Utils/Components.h"
 
 namespace main {
     auto displayMainMenu() -> void {
         displayTitle('\n' + EN::WELCOME);
         displayNumberedList({
-                                    EN::LOAD_LOCAL,
-                                    EN::LOAD_EXTERNAL,
-                                    EN::NEW_EMPTY,
-                                    EN::NEW_SAMPLE,
-                                    EN::ABOUT,
-                                    EN::EXIT
-                            });
+            EN::LOAD_LOCAL,
+            EN::LOAD_EXTERNAL,
+            EN::NEW_EMPTY,
+            EN::NEW_SAMPLE,
+            EN::ABOUT,
+            EN::EXIT
+        });
     }
 
-    auto displayLoadLocalFile(const std::vector<std::string> files) -> void {
+    auto displayLoadLocalFile(const std::vector<std::string> &files) -> void {
         displayTitle(EN::FILE_PROMPT);
         displayNumberedList(files);
     }

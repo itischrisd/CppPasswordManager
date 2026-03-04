@@ -1,5 +1,6 @@
-#include <vector>
+#pragma once
 #include <string>
+#include <vector>
 
 /**
  * Various methods dedicated to displaying main menu items using more generic methods and external strings
@@ -7,7 +8,7 @@
 namespace main {
     auto displayMainMenu() -> void;
 
-    auto displayLoadLocalFile(std::vector<std::string>) -> void;
+    auto displayLoadLocalFile(const std::vector<std::string> &) -> void;
 
     auto displayLoadExternalFile() -> void;
 

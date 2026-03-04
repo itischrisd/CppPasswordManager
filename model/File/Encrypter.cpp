@@ -1,19 +1,31 @@
-#include <numeric>
-#include <algorithm>
 #include "Encrypter.h"
+
+#include <algorithm>
+#include <numeric>
+#include <utility>
 
 auto encryptData(std::deque<std::string> &data, std::string password) -> void {
     simpleHash(password);
     encrypt(data.front(), "MasterTimestampPWD");
-    std::ranges::transform(data.begin() + 1, data.end(), data.begin() + 1,
-                           [password](auto elem) { return encrypt(elem, password); });
+
+    std::ranges::transform(
+        data.begin() + 1,
+        data.end(),
+        data.begin() + 1,
+        [&password](auto elem) { return encrypt(std::move(elem), password); }
+    );
 }
 
 auto decryptData(std::deque<std::string> &data, std::string password) -> void {
     simpleHash(password);
     decrypt(data.front(), "MasterTimestampPWD");
-    std::ranges::transform(data.begin() + 1, data.end(), data.begin() + 1,
-                           [password](auto elem) { return decrypt(elem, password); });
+
+    std::ranges::transform(
+        data.begin() + 1,
+        data.end(),
+        data.begin() + 1,
+        [&password](auto elem) { return decrypt(std::move(elem), password); }
+    );
 }
 
 auto simpleHash(std::string &password) -> void {
@@ -22,22 +34,30 @@ auto simpleHash(std::string &password) -> void {
     std::ranges::reverse(password);
 }
 
-auto encrypt(std::string line, const std::string password) -> std::string {
+auto encrypt(std::string line, const std::string &password) -> std::string {
     auto passchar = password.begin();
     auto transformer = [&passchar, &password](const auto c) {
-        if (passchar == password.end()) passchar = password.begin();
+        if (passchar == password.end()) {
+            passchar = password.begin();
+        }
+
         return c + *passchar++;
     };
+
     std::ranges::transform(line, line.begin(), transformer);
     return line;
 }
 
-auto decrypt(std::string line, const std::string password) -> std::string {
+auto decrypt(std::string line, const std::string &password) -> std::string {
     auto passchar = password.begin();
     auto transformer = [&passchar, &password](const auto c) {
-        if (passchar == password.end()) passchar = password.begin();
+        if (passchar == password.end()) {
+            passchar = password.begin();
+        }
+
         return c - *passchar++;
     };
+
     std::ranges::transform(line, line.begin(), transformer);
     return line;
 }

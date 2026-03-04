@@ -1,5 +1,7 @@
-#include <deque>
+#pragma once
 #include <string>
+
+#include "deque"
 
 /**
  * Encrypts strings in deque using provided password string
@@ -27,7 +29,7 @@ auto simpleHash(std::string &password) -> void;
  * @param password hashed password
  * @return encrypted string
  */
-auto encrypt(std::string line, std::string password) -> std::string;
+auto encrypt(std::string line, const std::string &password) -> std::string;
 
 /**
  * Decrypts single string using provided password string
@@ -35,4 +37,4 @@ auto encrypt(std::string line, std::string password) -> std::string;
  * @param password hashed password
  * @return decrypted string
  */
-auto decrypt(std::string line, std::string password) -> std::string;
+auto decrypt(std::string line, const std::string &password) -> std::string;

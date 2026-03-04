@@ -1,4 +1,5 @@
 #include "UserMenuView.h"
+
 #include "Locale/EN.cpp"
 #include "Utils/Components.h"
 
@@ -6,20 +7,20 @@ namespace user {
     auto displayUserMenu() -> void {
         displayTitle('\n' + EN::USER_WELCOME);
         displayNumberedList({
-                                    EN::USER_VIEW,
-                                    EN::USER_SEARCH,
-                                    EN::USER_SORT,
-                                    EN::USER_ADD_PASS,
-                                    EN::USER_EDIT,
-                                    EN::USER_DEL_PASS,
-                                    EN::USER_ADD_CAT,
-                                    EN::USER_DEL_CAT,
-                                    EN::USER_TIMESTAMP,
-                                    EN::USER_SAVE_CLOSE
-                            });
+            EN::USER_VIEW,
+            EN::USER_SEARCH,
+            EN::USER_SORT,
+            EN::USER_ADD_PASS,
+            EN::USER_EDIT,
+            EN::USER_DEL_PASS,
+            EN::USER_ADD_CAT,
+            EN::USER_DEL_CAT,
+            EN::USER_TIMESTAMP,
+            EN::USER_SAVE_CLOSE
+        });
     }
 
-    auto displayPasswords(const std::vector<std::vector<std::string>> &passwords) -> void {
+    auto displayPasswords(const std::vector<std::vector<std::string> > &passwords) -> void {
         displayTable(passwords);
     }
 
@@ -73,7 +74,7 @@ namespace user {
         displayTitle(EN::DEL_CAT_SUCCESS);
     }
 
-    auto displayDeleteCategory(const std::vector<std::string> categories) -> void {
+    auto displayDeleteCategory(const std::vector<std::string> &categories) -> void {
         displayTitle(EN::DEL_CAT_PROMPT);
         displayNumberedList(categories);
     }
@@ -90,7 +91,7 @@ namespace user {
         displayTitle(EN::DEL_CAT_SUCCESS);
     }
 
-    auto displayViewTimestamp(const std::string timestamp) -> void {
+    auto displayViewTimestamp(const std::string &timestamp) -> void {
         displayTitle(timestamp.empty() ? EN::TIMESTAMP_EMPTY : EN::TIMESTAMP_READ + ' ' + timestamp);
     }
 
@@ -130,10 +131,10 @@ namespace user {
     auto displayPasswordPasswordGenOptions() -> void {
         displayTitle(EN::ADD_PASS_GEN_OPTIONS);
         displayNumberedList(
-                {EN::ADD_PASS_GEN_LOWER, EN::ADD_PASS_GEN_UPPER, EN::ADD_PASS_GEN_NUMBERS, EN::ADD_PASS_GEN_SPECIAL});
+            {EN::ADD_PASS_GEN_LOWER, EN::ADD_PASS_GEN_UPPER, EN::ADD_PASS_GEN_NUMBERS, EN::ADD_PASS_GEN_SPECIAL});
     }
 
-    auto displayPasswordCategory(const std::vector<std::string> categories) -> void {
+    auto displayPasswordCategory(const std::vector<std::string> &categories) -> void {
         displayTitle(EN::ADD_PASS_ATTRIBUTE + EN::ATTR_CATEGORY);
         displayNumberedList(categories);
     }

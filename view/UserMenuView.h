@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include <vector>
 
@@ -7,7 +8,7 @@
 namespace user {
     auto displayUserMenu() -> void;
 
-    auto displayPasswords(const std::vector<std::vector<std::string>> &) -> void;
+    auto displayPasswords(const std::vector<std::vector<std::string> > &) -> void;
 
     auto displaySearchPassword() -> void;
 
@@ -33,7 +34,7 @@ namespace user {
 
     auto displayAddCategorySuccess() -> void;
 
-    auto displayDeleteCategory(std::vector<std::string>) -> void;
+    auto displayDeleteCategory(const std::vector<std::string> &) -> void;
 
     auto displayDeleteList() -> void;
 
@@ -41,7 +42,7 @@ namespace user {
 
     auto displayDeleteCategorySuccess() -> void;
 
-    auto displayViewTimestamp(std::string) -> void;
+    auto displayViewTimestamp(const std::string &) -> void;
 
     auto displayCloseMenu() -> void;
 
@@ -61,7 +62,7 @@ namespace user {
 
     auto displayPasswordPasswordGenOptions() -> void;
 
-    auto displayPasswordCategory(std::vector<std::string>) -> void;
+    auto displayPasswordCategory(const std::vector<std::string> &) -> void;
 
     auto displayPasswordWebsite() -> void;
 

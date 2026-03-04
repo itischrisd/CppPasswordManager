@@ -1,5 +1,7 @@
+#pragma once
 #include <deque>
 #include <string>
+
 #include "../UserMenuModel.h"
 
 /**

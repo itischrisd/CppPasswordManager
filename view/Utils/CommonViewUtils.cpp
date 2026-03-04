@@ -1,4 +1,5 @@
 #include "CommonViewUtils.h"
+
 #include "Components.h"
 #include "../Locale/EN.cpp"
 

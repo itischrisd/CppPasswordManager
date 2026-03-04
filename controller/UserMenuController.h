@@ -1,8 +1,9 @@
+#pragma once
 #include "../model/UserMenuModel.h"
 
 class UserMenuController {
-private:
     UserMenuModel userMenuModel;
+
 public:
     /**
      * Constructs new object of User Menu Controller
@@ -58,12 +59,12 @@ public:
     /**
      * Fetches timestamp of previous file acces and sends it for display
      */
-    auto viewTimestamp() -> void;
+    auto viewTimestamp() const -> void;
 
     /**
      * Asks user wether to save the data in Password Manager or not, then returns to main menu
      */
-    auto saveAndClose() -> void;
+    auto saveAndClose() const -> void;
 
     /**
      * Fetches all password data from model, then sends it for display
@@ -74,13 +75,13 @@ public:
      * Fetches all password data from model that satisfy query string, then sends it for display
      * @param query string that should be contained in resulting password's attributes
      */
-    auto passwordTable(std::string query) -> void;
+    auto passwordTable(const std::string &query) const -> void;
 
     /**
      * Fetches password data from model that have provided indexes, then sends it for display
      * @param indexes vector of indexes of passwords to display
      */
-    auto passwordTable(std::vector<int> indexes) -> void;
+    auto passwordTable(const std::vector<int> &indexes) -> void;
 
     /**
      * Gets, validates and sanitizes new password name
@@ -109,7 +110,7 @@ public:
     /**
      * Fetches all category names from model, then sends them for display
      */
-    auto passwordCategory() -> std::string;
+    [[nodiscard]] auto passwordCategory() const -> std::string;
 
     /**
      * Gets, validates and sanitizes new password website URL
@@ -133,5 +134,5 @@ public:
      * Checks if model has any category names currently loaded into program
      * @return true if there are no existing category names, false otherwise
      */
-    auto checkCategoriessEmpty() -> bool;
+    [[nodiscard]] auto checkCategoriessEmpty() const -> bool;
 };

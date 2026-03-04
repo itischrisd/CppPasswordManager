@@ -1,5 +1,6 @@
-#include <vector>
+#pragma once
 #include <string>
+#include <vector>
 
 /**
  * Checks if all integers in vector are smaller or equal to max and bigger than zero
@@ -7,7 +8,7 @@
  * @param max biggest allowed integer
  * @return true if 0 < all integers from input <= max, false otherwise
  */
-auto isFromRange(std::vector<int> input, int max) -> bool;
+auto isFromRange(const std::vector<int> &input, int max) -> bool;
 
 /**
  * Checks if input integer is smaller or equal to max integer and bigger than zero
@@ -22,25 +23,25 @@ auto isFromRange(int input, int max) -> bool;
  * @param input string to validate
  * @return true if string is positive integer, false otherwise
  */
-auto isSingleNumber(std::string input) -> bool;
+auto isSingleNumber(const std::string &input) -> bool;
 
 /**
  * Checks if string contains only  positive integers seperated by space
  * @param input string to validate
  * @return true if contains only positive integers and spaces, false otherwise
  */
-auto isMultiNumber(std::string input) -> bool;
+auto isMultiNumber(const std::string &input) -> bool;
 
 /**
  * Checks if string is not empty
  * @param input string to validate
  * @return true if not empty, false otherwise
  */
-auto isNotEmpty(std::string input) -> bool;
+auto isNotEmpty(const std::string &input) -> bool;
 
 /**
  * Checks if file specified by parameter exists in filesystem
  * @param input path to file to validate
  * @return true if input is valid file, false otherwise
  */
-auto isValidFile(std::string input) -> bool;
+auto isValidFile(const std::string &input) -> bool;

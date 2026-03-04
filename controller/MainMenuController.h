@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 
 /**
@@ -31,13 +32,10 @@ auto newSampleFile() -> void;
 auto aboutPasswordManager() -> void;
 
 /**
- *
- */
-/**
  * Invokes functions loading and decrypting data from provided filename/path
  * @param filename filename or path to file
  */
-auto loadData(std::string filename) -> void;
+auto loadData(const std::string &filename) -> void;
 
 /**
  * Allows user to select vault file from program's folder and loads its filename into parameter

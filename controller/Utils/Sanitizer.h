@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include <vector>
 
@@ -13,4 +14,4 @@ auto string_to_vec_int(std::string str) -> std::vector<int>;
  * @param str input to convert
  * @return integer from input string
  */
-auto string_to_int(std::string str) -> int;
+auto string_to_int(const std::string &str) -> int;

@@ -1,5 +1,6 @@
-#include <vector>
+#pragma once
 #include <string>
+#include <vector>
 
 /**
  * Auxiliary enum to manage password parameters requested by user
@@ -17,4 +18,4 @@ enum class PasswordOption {
  * @param passwordOption vector of enum values representing requirements
  * @return string satisfying required parameters and length
  */
-auto generatePassword(int length, std::vector<PasswordOption> passwordOption) -> std::string;
+auto generatePassword(int length, const std::vector<PasswordOption> &passwordOption) -> std::string;

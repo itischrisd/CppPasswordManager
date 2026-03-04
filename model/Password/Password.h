@@ -1,5 +1,4 @@
 #pragma once
-
 #include <string>
 #include <vector>
 
@@ -12,6 +11,7 @@ class Password {
     std::string category_;
     std::string website_;
     std::string login_;
+
 public:
     /**
      * Constructs Password object with all provided arguments
@@ -21,37 +21,42 @@ public:
      * @param website webstie URL, empty if none
      * @param login account login, empty if none
      */
-    Password(std::string name, std::string password, std::string category,
-             std::string website, std::string login);
+    Password(
+        std::string name,
+        std::string password,
+        std::string category,
+        std::string website,
+        std::string login
+    );
 
     /**
      * Construct empty Password object
      */
     Password();
 
-    auto getName() const -> std::string;
+    [[nodiscard]] auto getName() const -> std::string;
 
-    auto getPassword() const -> std::string;
+    [[nodiscard]] auto getPassword() const -> std::string;
 
-    auto getCategory() const -> std::string;
+    [[nodiscard]] auto getCategory() const -> std::string;
 
-    auto getWebsite() const -> std::string;
+    [[nodiscard]] auto getWebsite() const -> std::string;
 
-    auto getLogin() const -> std::string;
+    [[nodiscard]] auto getLogin() const -> std::string;
 
     /**
      * Provides string representation of object
      * @return vector of strings, which are object's fields values
      */
-    auto getAll() const -> std::vector<std::string>;
+    [[nodiscard]] auto getAll() const -> std::vector<std::string>;
 
-    void setName(std::string);
+    auto setName(const std::string &) -> void;
 
-    void setPassword(std::string);
+    auto setPassword(const std::string &) -> void;
 
-    void setCategory(std::string);
+    auto setCategory(const std::string &) -> void;
 
-    void setWebsite(std::string);
+    auto setWebsite(const std::string &) -> void;
 
-    void setLogin(std::string);
+    auto setLogin(const std::string &) -> void;
 };
